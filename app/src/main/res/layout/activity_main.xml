@@ -4,14 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/car"
         android:layout_width="150dp"
         android:layout_height="100dp"
-        android:src="@drawable/car"
-        android:layout_marginTop="40dp"
         android:layout_marginStart="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -20,8 +19,8 @@
         android:id="@+id/welcome"
         app:layout_constraintTop_toBottomOf="@id/car"
         app:layout_constraintStart_toStartOf="@id/car"
-        android:layout_marginTop="80dp"
-        android:fontFamily="@font/rowdies_bold"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/bungee"
         android:text="Hello there, \nwelcome back"
         android:textSize="36sp"
         android:textColor="@color/black"
@@ -39,32 +38,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/username"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        app:boxStrokeColor="@color/black"
-        app:boxBackgroundColor="@color/white"
-        android:hint="Username"
-        style="@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox"
-        app:layout_constraintTop_toBottomOf="@id/to_continue">
-
-        <com.google.android.material.textfield.TextInputEditText
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/username"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="16dp"
+            android:hint="Username"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:layout_constraintTop_toBottomOf="@id/to_continue">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
         android:hint="Password"
         app:boxStrokeColor="@color/black"
         app:boxBackgroundColor="@color/white"
         app:endIconMode="password_toggle"
-        style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         app:layout_constraintTop_toBottomOf="@id/username">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -83,6 +82,7 @@
         android:textStyle="bold"
         android:textColor="@color/black"
         android:layout_marginEnd="32dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password"/>
 
